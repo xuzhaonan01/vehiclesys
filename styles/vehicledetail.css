@@ -1,0 +1,18 @@
+@import "styles.css";
+
+/* 表格 */
+table#dg{
+    
+}
+
+
+tr{
+    height:30px;
+    line-height: 30px;
+    
+}
+
+td{
+    border-top:solid 1px black;
+
+}

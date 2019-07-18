@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/index.css" />
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/vue/dist/vue.min.js"></script>
+    <script src="/share.js"></script>
+    <script src="/index.js"></script>
+    <script>
+        $(document).ready(function(){
+            // mainpageInit();
+        });    
+    </script>
+</head>
+<body>
+    <div style="width:100%;height:50px;background-color:#2f69aa;color:white;line-height: 50px">
+        <span class="topicwords" style="margin-left:50px;">CAR PAGE</span>
+    </div>
+    <div style="width:100%;height:300px;background-image: url('/cartitle.png');background-repeat: repeat-x;opacity: 0.5;">
+        <div class="centercontent" style="height:50px;line-height:50px;"><span class="topicwords" style="color:white">Vehicle Facts, History, and more</span></div>
+        <div class="centercontent" style="height:50px;line-height:50px;"><span class="topicwords" style="color:white;font-size: 30px">CAR PAGE</span></div>
+        <div class="centercontent" style="height:50px;line-height:50px;"><span class="topicwords" style="color:white">Search by Plate</span></div>
+        <div class="centercontent" style="height:50px;line-height:50px;"><input id="content" type="text" style="height:30px;width:300px;border-radius: 10px;text-align: center"></div>
+        <div class="centercontent" style="height:50px;line-height:50px;"><button onclick="search_btn_onclick(event)" style="height:50px;width:150px;border-radius: 7px;background-color: #07331e;color:white;font-size:20px;font-weight:bolder;cursor: pointer;">SEARCH</button></div>
+    </div>
+    
+</body>
+</html>
+

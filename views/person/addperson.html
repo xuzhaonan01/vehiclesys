@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CAR</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/person.css" />
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/vue/dist/vue.min.js"></script>
+    <script src="/share.js"></script>
+    <script src="/person/addperson.js"></script>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/3.28/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.28/"></script>
+    <script src="/geo.js"></script>
+
+    <script>
+        function loadbase(){
+            mainInit();
+            // subInit();
+            loadmap();
+        }
+    </script>
+</head>
+<body onload="loadbase()">
+    <div class="topicbar">
+        <span class="topicwords" style="margin-left:50px;">CAR PAGE</span>
+    </div>
+    <div id="functionbar" class="functionbar">
+        <div v-for="(item, index) in topic" :key="index" class="topbutton">
+            {{item.name}}
+        </div>
+    </div>
+    <div id="content" style="height:800px;width:100%;">
+        <div style="height:100%;width:15%;float:left;background: #2f69aa;text-align: center">
+            <ol>
+                <li class="leftbaritem">Create</li>
+                <li class="leftbaritem">Delete</li>
+                <li class="leftbaritem">Edit</li>
+                <li class="leftbaritem">Email</li>
+                <li class="leftbaritem">statistics</li>
+            </ol>
+        </div>
+        <div style="height:100%;width:85%;background:#ffffff;float:right;text-align: center">
+            <form>
+                <table style="text-align: left;width:70%;margin-top:50px;margin-left: 50px;background: lightblue;padding-top:50px;padding-bottom: 50px">
+                    <tr>
+                        <td>FIRSTNAME:</td>
+                        <td><input></td>
+                        <td>LASTNAME:</td>
+                        <td><input></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>GENDER:</td>
+                        <td><select><option>Male</option><option>Female</option><option>Unknow</option></select></td>
+                        <td>LASTNAME:</td>
+                        <td><input></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>PHONE:</td>
+                        <td><input></td>
+                        <td>EMAIL:</td>
+                        <td><input></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>ADDRESS:</td>
+                        <td><input></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>      
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="提交">
+                            </td>
+                    </tr>         
+                </table>
+            </form>
+            
+            <div id="mymap" style="width:70%;height:500px;margin-left: 50px;"></div>
+        </div>
+    </div>
+</body>
+</html>
+

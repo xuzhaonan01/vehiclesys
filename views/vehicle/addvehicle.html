@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CAR</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/person.css" />
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/vue/dist/vue.min.js"></script>
+    <script src="/share.js"></script>
+    <script src="/vehicle/addvehicle.js"></script>
+
+    <script>
+        function loadbase(){
+            mainInit();
+            // subInit();
+        }
+    </script>
+</head>
+<body onload="loadbase()">
+    <div class="topicbar">
+        <span class="topicwords" style="margin-left:50px;">CAR PAGE</span>
+    </div>
+    <div id="functionbar" class="functionbar">
+        <div v-for="(item, index) in topic" :key="index" class="topbutton">
+            {{item.name}}
+        </div>
+    </div>
+    <div id="content" style="height:800px;width:100%;">
+        <div style="height:100%;width:15%;float:left;background: #2f69aa;text-align: center">
+            <ol>
+                <li class="leftbaritem">Create</li>
+                <li class="leftbaritem">Delete</li>
+                <li class="leftbaritem">Edit</li>
+                <li class="leftbaritem">Email</li>
+                <li class="leftbaritem">statistics</li>
+            </ol>
+        </div>
+        <div style="height:100%;width:85%;background:#ffffff;float:right;text-align: center">
+            <form>
+                <table style="text-align: left;width:70%;margin-top:50px;margin-left: 50px;background: lightblue;padding-top:50px;padding-bottom: 50px">
+                        <tr><td>Year:</td><td><input name="year"></td><td>Make:</td><td><input name="make"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Model:</td><td><input name="model"></td><td>Color:</td><td><input name="color"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Body Style:</td><td><input name="bodystyle"></td><td>VIN:</td><td><input name="vin"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Plate:</td><td><input name="plate"></td><td>Engine No:</td><td><input name="engine"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Chassis:</td><td><input name="chassis"></td><td>Vehicle Type:</td><td><input name="vehicletype"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Seats:</td><td><input name="seats"></td><td>CC rating:</td><td><input name="ccrating"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Fuel Type:</td><td><input name="fueltype"></td><td>Transmission:</td><td><input name="transmission"></td>></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Assembly Type:</td><td><input name="assemblytype"></td><td>Country of Origin:</td><td><input name="country"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Gross Vehicle Mass:</td><td><input type="gross"></td><td>Vehicle Equipment Class:</td><td><input type="vec"></td></tr>
+                        <tr style="height:12px"></tr>
+                        <tr><td>Model Code:</td><td><input type="modelcode"></td></tr>
+                        <tr><td></td></tr>  
+                        <tr><td></td><td></td><td></td><td><input type="submit"></td></tr>     
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

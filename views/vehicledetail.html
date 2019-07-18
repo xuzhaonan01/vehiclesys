@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/vehicledetail.css" />
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/js-cookie/src/js.cookie.js"></script>
+    <script src="/vue/dist/vue.min.js"></script>
+    <script src="/share.js"></script>
+    <script src="/vehicledetail.js"></script>
+    <script>
+        $(document).ready(function(){
+            mainpageInit();
+            var code = Cookies.get('code');
+            $.ajax({
+                type: 'post',
+                url: "/vehicle/detail",
+                data: {code:code},
+                success: function(res){
+                    base.insert(res);
+                }
+            });
+        });    
+    </script>
+</head>
+<body>
+    <div style="width:100%;height:50px;background-color:#2f69aa;color:white;line-height: 50px">
+        <span class="topicwords" style="margin-left:50px;">CAR PAGE</span>
+    </div>
+    <div id="detail" style="width:100%;">
+        <div class="leftcontent" style="height:50px;line-height:50px"><span class="topicwords" style="color:#6487f8;font-size: 30px">{{year}}&nbsp{{make}}&nbsp{{model}}</span></div>
+        <div class="leftcontent" style="height:20px;line-height:20px"><span class="commonwords" style="color:#1b1b1b;font-size: 20px">{{color}}&nbsp{{body_style}}</span></div>
+        <div class="leftcontent" style="height:30px;line-height:30px"><span class="commonwords" style="color:#0f0f0f;font-size: 20px">{{plate}}</span></div>
+        <div style="margin:10px 50px 10px 50px;background-color: #f8dfbe;border-color: #f5c07a;height:100px;border-radius: 5px;border-width: 2px;">
+            <div class="leftcontent" style="height:50px;line-height:50px"><span class="commonwords" style="color:#0f0f0f;font-size: 15">Click and get customer's detail</span></div>
+            <button style="height:30px;width:150px;margin-left:50px;border-radius: 7px;background-color: #911f1f;color:white;font-size:15px;font-weight:bolder;cursor: pointer;">CUSTOMER</button>
+        </div>
+        <div style="margin:10px 50px 10px 50px;">
+            <div style="width:50%;float: left;">
+                <table id="dg" style="width:100%">
+                    <tr><td>Year:{{year}}</td></tr>
+                    <tr><td>Make:{{make}}</td></tr>
+                    <tr><td>Model:{{model}}</td></tr>
+                    <tr><td>Colour:{{color}}</td></tr>
+                    <tr><td>Body Style:{{body_style}}</td></tr>
+                    <tr><td>VIN:{{vin}}</td></tr>
+                    <tr><td>Plate:{{plate}}</td></tr>
+                    <tr><td>Engine No:{{engine_no}}</td></tr>
+                    <tr><td>Chassis:{{chasssis}}</td></tr>
+                    <tr><td>Vehicle Type:{{vehicle_type}}</td></tr>
+                    <tr><td>Seats:{{seats}}</td></tr>
+                    <tr><td>CC rating:{{cc_rating}}</td></tr>
+                    <tr><td>Fuel Type:{{fuel_type}}</td></tr>
+                    <tr><td>Transmission:{{transmission}}</td></tr>
+                    <tr><td>Assembly Type:{{assembly_type}}</td></tr>
+                    <tr><td>Country of Origin:{{ori_country}}</td></tr>
+                    <tr><td>Gross Vehicle Mass:{{mass}}</td></tr>
+                    <tr><td>Vehicle Equipment Class:{{vehicle_eq_class}}</td></tr>
+                    <tr><td>Model Code:{{model_code}}</td></tr>
+                    <tr><td></td></tr>
+                </table>
+            </div>
+            <div style="width:50%;float: right;">
+                <img src="/car1.png">
+                <table id="dg" style="width:100%;margin-top: 50px">
+                    <tr><td>Last Odometer Reading:	89,627 Km</td></tr>
+                    <tr><td>Is odometer reliable?	 Get Full CarJam Report</td></tr>
+                    <tr><td>Imported with Damage:	 Get Full CarJam Report</td></tr>
+                    <tr><td>Water/Fire Damage:	 Get Full CarJam Report</td></tr>
+                    <tr><td></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
